@@ -13,7 +13,7 @@ Set working directory
 
 .. code-block:: bash
 
-  export RELEASE_WORKING_DIR=/Users/nchung/dev/sdap/
+  export RELEASE_WORKING_DIR=/Users/sdap/release/
 
 Tag and package Nexus Proto source
 
@@ -61,6 +61,7 @@ Add source packages, signatures and digests to subversion
 
 .. code-block:: bash
 
+  cd $RELEASE_WORKING_DIR
   svn co https://dist.apache.org/repos/dist/dev/incubator/sdap sdap
   mkdir sdap/apache-sdap-1.0.0-rc1
   cp incubator-sdap-nexusproto/apache-sdap-nexusproto-1.0.0-src.tar.gz* sdap/apache-sdap-1.0.0-rc1/.
