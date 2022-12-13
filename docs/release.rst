@@ -3,6 +3,12 @@ To create a release candidate, you will need:
 * Apache LDAP credential for SVN
 * A GPG key for signing, published in `KEYS <https://dist.apache.org/repos/dist/release/incubator/sdap/KEYS>`_
 
+Instructions for creating key: https://infra.apache.org/openpgp.html#generate-key
+
+Use :code:`gpg2 --full-gen-key`
+
+Instructions for adding public keys to LDAP: https://home.apache.org/keys/
+
 Set working directory
 
 .. code-block:: bash
@@ -54,6 +60,7 @@ Tag and package Nexus source
 Add source packages, signatures and digests to subversion
 
 .. code-block:: bash
+
   svn co https://dist.apache.org/repos/dist/dev/incubator/sdap sdap
   mkdir sdap/apache-sdap-1.0.0-rc1
   cp incubator-sdap-nexusproto/apache-sdap-nexusproto-1.0.0-src.tar.gz* sdap/apache-sdap-1.0.0-rc1/.
